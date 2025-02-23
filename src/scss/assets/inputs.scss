@@ -1,0 +1,44 @@
+@use "@/scss/utils/variables" as *;
+
+div.input-form {
+  display: flex;
+  gap: .5em;
+  flex-direction: column;
+}
+
+label {
+  font-size: .9em;
+  color: $gray-1;
+
+  &.required::after {
+    color: $red;
+    content: " *";
+  }
+}
+
+input[type="text"] {
+  padding: .9em 1.1em;
+  width: 100%;
+
+  font-family: "poppins-bold", sans-serif;
+
+  background-color: $primary-2;
+  color: $white;
+
+  font-size: 1.2em;
+
+  &::placeholder {
+    color: $gray-5;
+  }
+
+  border-radius: 20px;
+  border: 1px solid $gray-1;
+  transition: all .5s ease;
+
+  &.error {
+    border-color: $red;
+    &, &::placeholder {
+      color: $red;
+    }
+  }
+}

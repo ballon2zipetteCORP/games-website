@@ -1,0 +1,55 @@
+@use "../../utils/variables" as *;
+
+div.container {
+  margin: 2em 2em;
+}
+
+a.back-btn {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+
+  color: $primary-200;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  list-style: none;
+  margin: 2em 0;
+
+  border-bottom: 3px solid $gray-2;
+  padding-bottom: 1em;
+
+  &>li {
+    background-color: $secondary;
+    color: $gray-1;
+
+    padding: .8em .6em .8em 1em;
+    border-radius: 20px;
+
+    font-family: "poppins-bold", sans-serif;
+    text-transform: uppercase;
+
+    &.active {
+      background-color: $primary-2;
+      color: $white;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &>button {
+      font-size: .9em;
+      width: fit-content;
+    }
+  }
+}

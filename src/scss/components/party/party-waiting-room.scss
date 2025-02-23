@@ -1,0 +1,104 @@
+@use "../../utils/variables" as *;
+
+div.section {
+  margin: 2em;
+  padding-top: 3em;
+}
+
+div.party-settings {
+  padding: 1em;
+  border-radius: 10px;
+  margin-top: 1em;
+
+  &>h4 {
+    color: $gray-5;
+  }
+}
+
+button.start-game-btn {
+  position: fixed;
+  bottom: 1.5em;
+  left: 50%;
+
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+h1, h2 {
+  text-align: center;
+}
+h2 {
+  margin-top: .5em;
+  &>span {
+    background-color: $primary-2;
+    padding: .2em .5em;
+    border-radius: 10px;
+  }
+}
+
+h4.code {
+  background-color: $primary;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  padding: .2em .5em;
+  border-radius: 10px;
+  font-family: "poppins-bold", sans-serif;
+}
+
+h3.players-title {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+ul.players {
+  &>li {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    &>img {
+      border-radius: 100px;
+      width: 4em;
+    }
+
+    &>h4 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &>span.me {
+        background-color: $primary-400;
+        padding: .3em .7em;
+        font-size: .8em;
+        border-radius: 100px;
+        font-family: "poppins-bold", sans-serif;
+      }
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+      border-bottom: 3px solid $gray-2;
+    }
+  }
+}
+
+button.leave {
+  width: fit-content;
+  font-size: .9em;
+  padding: unset;
+  background-color: transparent;
+  box-shadow: unset;
+  border: unset;
+
+  color: $red-200;
+
+  position: absolute;
+  top: .5em;
+  right: 1.5em;
+
+  &:hover {
+    transform: unset;
+  }
+}

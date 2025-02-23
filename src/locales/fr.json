@@ -1,0 +1,29 @@
+{
+  "home": {
+    "title": ["Bienvenue", "sur zipette games"],
+    "createPartyBtn": "Créer un salon",
+    "joinPartyBtn": "Rejoindre"
+  },
+  "defineIdentity": {
+    "confirm": "Confirmer",
+    "title": "Hold up !",
+    "subtitle": "Donne ton nom sinon on te tabasse"
+  },
+  "newGame": {
+    "back": "Retour à l'accueil",
+    "title": "Nouvelle partie",
+    "create": "Créer une partie",
+    "gameSelected": {
+      "active": "Selectionné",
+      "choose": "Choisir"
+    }
+  },
+  "waitingRoom": {
+    "title": "Salle d'attente",
+    "startGame": "Démarrer la partie",
+    "me": "C'est moi wesh",
+    "settings": "Paramètres de la partie",
+    "players": "Joueurs",
+    "leave": "Quitter"
+  }
+}
