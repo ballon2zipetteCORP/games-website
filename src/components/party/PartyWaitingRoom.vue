@@ -25,7 +25,7 @@
     </ul>
   </div>
 
-  <button v-if="isMeOwner" class="start-game-btn" :disabled="isDisabled" @click="useParty().startGame(party!.id)">
+  <button v-if="isMeOwner" class="start-game-btn" :disabled="isDisabled" @click="useParty().start(party!.id)">
     {{ $t('waitingRoom.startGame') }}
   </button>
 </template>

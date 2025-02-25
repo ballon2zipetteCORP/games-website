@@ -75,5 +75,5 @@ const join = async () => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/components/home-page.scss";
+@use "@/scss/components/home-page.scss" as *;
 </style>

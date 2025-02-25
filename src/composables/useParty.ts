@@ -68,8 +68,8 @@ const useParty = () => {
         return data?.party ?? {};
     }
 
-    const startGame = async (id: string) => {
-        const data = await useGQLQueryStore().query<{ startParty: { status: string } }>({
+    const start = async (id: string) => {
+        await useGQLQueryStore().query<{ startParty: { status: string } }>({
             document: gql`
                 mutation StartGame($id: ID!) {
                     startParty(id: $id) {
@@ -81,7 +81,6 @@ const useParty = () => {
             type: QueryType.QUERY,
             variables: { id }
         });
-        useConnectedPartyStore().party!.status = data?.startParty?.status;
     }
 
     const leave = async (id: string) => {
@@ -133,7 +132,7 @@ const useParty = () => {
         join,
         leave,
         saveSettings,
-        startGame
+        start
     }
 
 }

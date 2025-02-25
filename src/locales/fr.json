@@ -18,7 +18,17 @@
       "choose": "Choisir"
     }
   },
+  "games": {
+    "werewolf": {
+      "mission": "Votre mission",
+      "reveal": "Clique pour afficher ta carte"
+    }
+  },
   "waitingRoom": {
+    "error": {
+      "title": "Erreur: status inconnu",
+      "backToHome": "Retour à l'accueil"
+    },
     "title": "Salle d'attente",
     "startGame": "Démarrer la partie",
     "me": "C'est moi wesh",
