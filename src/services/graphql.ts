@@ -24,6 +24,7 @@ const authLink = setContext(async (_, {headers}) => {
 
 const httpLink = createHttpLink({
     uri: import.meta.env.VITE_API_URL,
+    credentials: "include",
     fetchOptions: {
         mode: "no-cors"
     }
