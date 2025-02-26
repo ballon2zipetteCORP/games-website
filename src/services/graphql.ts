@@ -8,7 +8,9 @@ const authLink = setContext(async (_, {headers}) => {
     const identityStore = useIdentityStore();
     const {token} = storeToRefs(identityStore);
 
-    let defaultHeaders: Record<string, unknown> = {};
+    let defaultHeaders: Record<string, unknown> = {
+        'Content-type': 'application/json'
+    };
     if(headers) {
         defaultHeaders = {...defaultHeaders, ...headers};
     }
@@ -22,9 +24,6 @@ const authLink = setContext(async (_, {headers}) => {
 
 const httpLink = createHttpLink({
     uri: import.meta.env.VITE_API_URL,
-    headers: {
-        'content-type': 'application/json'  
-    },
     fetchOptions: {
         mode: "no-cors"
     }
