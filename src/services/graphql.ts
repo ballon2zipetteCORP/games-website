@@ -24,10 +24,6 @@ const authLink = setContext(async (_, {headers}) => {
 
 const httpLink = createHttpLink({
     uri: import.meta.env.VITE_API_URL,
-    credentials: "include",
-    fetchOptions: {
-        mode: "no-cors"
-    }
 });
 export const defaultClient = new ApolloClient({
     link: authLink.concat(httpLink),
