@@ -8,9 +8,7 @@ const authLink = setContext(async (_, {headers}) => {
     const identityStore = useIdentityStore();
     const {token} = storeToRefs(identityStore);
 
-    let defaultHeaders: Record<string, unknown> = {
-        'Content-type': 'application/json'
-    };
+    let defaultHeaders: Record<string, unknown> = {};
     if(headers) {
         defaultHeaders = {...defaultHeaders, ...headers};
     }
@@ -18,6 +16,8 @@ const authLink = setContext(async (_, {headers}) => {
     if(token.value) {
         defaultHeaders["authorization"] = `Bearer ${token.value}`;
     }
+
+    defaultHeaders["content-type"] = "application/json";
 
     return {headers: defaultHeaders};
 });
