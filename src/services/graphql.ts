@@ -21,8 +21,7 @@ const authLink = setContext(async (_, {headers}) => {
 });
 
 const httpLink = createHttpLink({
-    uri: import.meta.env.VITE_API_URL,
-    credentials: "same-origin"
+    uri: import.meta.env.VITE_API_URL
 });
 export const defaultClient = new ApolloClient({
     link: authLink.concat(httpLink),
