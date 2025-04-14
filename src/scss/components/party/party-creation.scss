@@ -29,8 +29,8 @@ ul {
   padding-bottom: 1em;
 
   &>li {
-    background-color: $secondary;
-    color: $gray-1;
+    background-color: $primary-2;
+    color: $white;
 
     padding: .8em .6em .8em 1em;
     border-radius: 20px;
@@ -39,8 +39,8 @@ ul {
     text-transform: uppercase;
 
     &.active {
-      background-color: $primary-2;
-      color: $white;
+      background-color: $primary-100;
+      color: $gray-2;
     }
 
     display: flex;

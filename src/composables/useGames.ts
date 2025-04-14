@@ -14,6 +14,8 @@ export interface IGame {
         description: string;
         expectedActions: string[];
     }[];
+
+    defaultTimeToDrink: number;
 }
 
 export type TGames = IGame[];

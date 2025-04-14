@@ -56,6 +56,9 @@ const useParty = () => {
                   image
                 }
               }
+              ... on Megademon {
+                defaultTimeToDrink
+              }
             }
           }
         }

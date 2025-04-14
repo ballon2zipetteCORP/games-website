@@ -54,6 +54,8 @@ import { storeToRefs } from "pinia";
 import { computed, ref } from "vue";
 
 import WerewolfSettings from "@/components/party/games/werewolf/WerewolfSettings.vue";
+import MegademonSettings from "@/components/party/games/megademon/MegademonSettings.vue";
+
 import useParty from "@/composables/useParty.ts";
 import { useRouter } from "vue-router";
 
@@ -68,6 +70,8 @@ const settings = ref<any>(null);
 const SettingsComponent = computed(() => {
   if (party.value?.game?.id === "werewolf") {
     return WerewolfSettings;
+  } else if(party.value?.game?.id === "megademon") {
+    return MegademonSettings
   }
   return null;
 });

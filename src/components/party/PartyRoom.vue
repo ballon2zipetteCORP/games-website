@@ -22,6 +22,8 @@ import { useRoute } from "vue-router";
 import { useConnectedPartyStore } from "@/stores/useConnectedPartyStore.ts";
 
 import WerewolfGame from "@/components/party/games/werewolf/WerewolfGame.vue";
+import MegademonGame from "@/components/party/games/megademon/MegademonGame.vue";
+
 import PartyWaitingRoom from "@/components/party/PartyWaitingRoom.vue";
 import LoadingSpinner from "@/components/ui/LoadingSpinner.vue";
 import useParty, { GameStatus } from "@/composables/useParty.ts";
@@ -41,6 +43,8 @@ const { websocket } = storeToRefs(websocketStore);
 const GameComponent = computed(() => {
   if (party.value?.game.id === "werewolf") {
     return WerewolfGame;
+  } else if(party.value?.game?.id === "megademon") {
+    return MegademonGame;
   }
 });
 

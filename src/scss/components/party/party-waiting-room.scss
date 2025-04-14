@@ -16,11 +16,9 @@ div.party-settings {
 }
 
 button.start-game-btn {
-  position: fixed;
-  bottom: 1.5em;
-  left: 50%;
+  margin: auto;
+  margin-top: 3em;
 
-  transform: translateX(-50%);
   width: 90%;
 }
 
