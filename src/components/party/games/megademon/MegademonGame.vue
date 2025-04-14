@@ -175,7 +175,7 @@ const spin = () => {
     },
     onComplete: () => {
       currentRotation = targetRotation % 360;
-      //hideWheel.value = true;
+      hideWheel.value = true;
     }
   });
 }
