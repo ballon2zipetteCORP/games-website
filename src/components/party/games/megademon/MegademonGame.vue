@@ -1,6 +1,6 @@
 <template>
   <div class="middle">
-    <div v-if="hideWheel">
+    <div v-if="hideWheel || !!playerChosen">
       <h2 class="title">Bon courage {{ playerChosen }}</h2>
       <img
         :style="{'animation-duration': duration}"
