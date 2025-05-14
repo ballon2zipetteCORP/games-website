@@ -70,6 +70,8 @@ const useParty = () => {
   };
 
   const start = async (id: string) => {
+    localStorage.removeItem("megademon:playerChosen");
+    localStorage.removeItem("megademon:timeToDrink");
     await useGQLQueryStore().query<{ startParty: { status: string } }>({
       document: gql`
         mutation StartGame($id: ID!) {
